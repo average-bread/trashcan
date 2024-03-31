@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "trashcan",
+  "version": "${version}",
+
+  "name": "Bread's Trashcan",
+  "description": "Random stuff",
+  "authors": [
+    "Bread (with a lot of help)"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+	"icon": "icon.png",
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+			"cursedbread.trashcan.TrashMod"
+    ],
+		"beforeGameStart": [
+			"cursedbread.trashcan.TrashMod"
+		]
+	},
+  "mixins": [
+      "trashcan.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.3"
+  },
+  "suggests": {
+  }
+}

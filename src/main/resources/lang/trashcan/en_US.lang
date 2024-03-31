@@ -1,0 +1,6 @@
+item.trashcan.upDice.name=Spinup Dice
+item.trashcan.upDice.desc=+1
+
+item.trashcan.downDice.name=Spindown Dice
+item.trashcan.downDice.desc=-1
+
