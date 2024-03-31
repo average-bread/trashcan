@@ -1,5 +1,6 @@
 package cursedbread.trashcan;
 
+import cursedbread.trashcan.items.IdDetector;
 import cursedbread.trashcan.items.SpinDownDice;
 import cursedbread.trashcan.items.SpinUpDice;
 import net.fabricmc.api.ModInitializer;
@@ -26,6 +27,7 @@ public class TrashMod implements ModInitializer, GameStartEntrypoint {
 	public static int itemId;
 	public static Item upDice;
 	public static Item downDice;
+	public static Item idDetector;
 
 	static{
 		Properties prop = new Properties();
@@ -49,6 +51,7 @@ public class TrashMod implements ModInitializer, GameStartEntrypoint {
 	public void beforeGameStart() {
 		upDice = ItemHelper.createItem(MOD_ID, new SpinUpDice("upDice", itemId++), "upDice.png");
 		downDice = ItemHelper.createItem(MOD_ID, new SpinDownDice("downDice", itemId++), "downDice.png");
+		idDetector = ItemHelper.createItem(MOD_ID, new IdDetector("idDetector", itemId++), "idDetector.png");
 	}
 
 	@Override

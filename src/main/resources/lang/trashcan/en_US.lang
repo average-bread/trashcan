@@ -4,3 +4,6 @@ item.trashcan.upDice.desc=+1
 item.trashcan.downDice.name=Spindown Dice
 item.trashcan.downDice.desc=-1
 
+item.trashcan.idDetector.name=Id Detector
+item.trashcan.idDetector.desc=Shows block's ids because why not
+
