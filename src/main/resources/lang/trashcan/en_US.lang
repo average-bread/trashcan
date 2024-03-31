@@ -9,3 +9,9 @@ item.trashcan.idDetector.desc=Shows block's ids because why not
 
 tile.trashcan.fireblock.name=Block Of Fire
 tile.trashcan.fireblock.desc=Fire but solid
+
+tile.trashcan.clockblock.name=Clock Block
+tile.trashcan.clockblock.desc=Time traveling
+
+tile.trashcan.compasblock.name=Compass Block
+tile.trashcan.compasblock.desc=Space traveling

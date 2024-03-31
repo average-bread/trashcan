@@ -1,5 +1,7 @@
 package cursedbread.trashcan;
 
+import cursedbread.trashcan.blocks.ClockBlock;
+import cursedbread.trashcan.blocks.CompasBlock;
 import cursedbread.trashcan.items.IdDetector;
 import cursedbread.trashcan.items.SpinDownDice;
 import cursedbread.trashcan.items.SpinUpDice;
@@ -7,8 +9,6 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockFire;
-import net.minecraft.core.block.BlockTorch;
-import net.minecraft.core.block.material.Material;
 import net.minecraft.core.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +33,8 @@ public class TrashMod implements ModInitializer, GameStartEntrypoint {
 	public static Item downDice;
 	public static Item idDetector;
 	public static Block fireBlock;
-
+	public static Block clockBlock;
+	public static Block compassBlock;
 	static{
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id","2000");
@@ -57,6 +58,16 @@ public class TrashMod implements ModInitializer, GameStartEntrypoint {
 		fireBlock = fullBlock
 			.setTextures("fireblock.png")
 			.build(new BlockFire("fireblock", blockId++));
+
+		clockBlock = fullBlock
+			.setSideTextures("clockblock_side.png")
+			.setTopBottomTexture("clockblock_top.png")
+			.build(new ClockBlock("clockblock", blockId++));
+
+		compassBlock = fullBlock
+			.setSideTextures("compasblock_side.png")
+			.setTopBottomTexture("compasblock_top.png")
+			.build(new CompasBlock("compasblock", blockId++));
 
 		upDice = ItemHelper.createItem(MOD_ID, new SpinUpDice("upDice", itemId++), "upDice.png");
 		downDice = ItemHelper.createItem(MOD_ID, new SpinDownDice("downDice", itemId++), "downDice.png");
