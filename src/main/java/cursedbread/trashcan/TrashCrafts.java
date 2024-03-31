@@ -40,7 +40,32 @@ public class TrashCrafts implements RecipeEntrypoint {
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("HHH", "HHH", "HHH")
 			.addInput('H', Block.fire)
-			.create("fire but epic", new ItemStack(Item.chainlink, 1));
+			.create("fire block", new ItemStack(TrashMod.fireBlock, 1));
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("HHH", "HHH", "HHH")
+			.addInput('H', TrashMod.fireBlock)
+			.create("chain", new ItemStack(Item.chainlink, 1));
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("HHH", "H H")
+			.addInput('H', Block.fenceChainlink)
+			.create("chain helmet", new ItemStack(Item.armorHelmetChainmail, 1));
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("H H", "HHH", "HHH")
+			.addInput('H', Block.fenceChainlink)
+			.create("chain chestplate", new ItemStack(Item.armorChestplateChainmail, 1));
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("HHH", "H H", "H H")
+			.addInput('H', Block.fenceChainlink)
+			.create("chain pants", new ItemStack(Item.armorLeggingsChainmail, 1));
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("H H", "H H")
+			.addInput('H', Block.fenceChainlink)
+			.create("chain boots", new ItemStack(Item.armorBootsChainmail, 1));
 	}
 }
 
