@@ -7,3 +7,5 @@ item.trashcan.downDice.desc=-1
 item.trashcan.idDetector.name=Id Detector
 item.trashcan.idDetector.desc=Shows block's ids because why not
 
+tile.trashcan.fireblock.name=Block Of Fire
+tile.trashcan.fireblock.desc=Fire but solid

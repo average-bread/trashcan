@@ -7,6 +7,10 @@ import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
 public class SpinUpDice extends Item {
 	public SpinUpDice(String item, int i) {
 		super(item, i);
@@ -19,7 +23,15 @@ public class SpinUpDice extends Item {
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, Side side, double xPlaced, double yPlaced) {
 		i = world.getBlockId(x, y, z);
-		world.setBlock(x, y, z, i+1);
+		i++;
+		while (Block.blocksList[i] == null) {
+			i = i + 1;
+			if (i > 910) {
+				i = 910;
+				break;
+			}
+		}
+		world.setBlock(x, y, z, i);
 		return false;
 	}
 }

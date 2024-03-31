@@ -18,7 +18,8 @@ public class IdDetector extends Item {
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, Side side, double xPlaced, double yPlaced) {
 		i = world.getBlockId(x, y, z);
-		player.addChatMessage(String.valueOf(i));
+		j = world.getBlockMetadata(x, y, z);
+		player.addChatMessage(i + ":" + j);
 		return false;
 	}
 }
