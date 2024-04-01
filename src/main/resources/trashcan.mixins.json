@@ -5,7 +5,9 @@
     "compatibilityLevel": "JAVA_8",
     "mixins": [
       "BlockBreakMixin",
-      "BlockWalkMixin"
+      "BlockWalkMixin",
+      "BlockSlipMixin",
+      "BlockRandomMixin"
     ],
     "client": [
     ],

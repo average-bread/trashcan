@@ -19,7 +19,7 @@ public abstract class BlockWalkMixin {
 
 	public void onEntityWalking(World world, int x, int y, int z, Entity entity) {
 		int i = world.rand.nextInt(910);
-		i--;
+		i++;
 		while (Block.blocksList[i] == null) {
 			i = i - 1;
 			if (i < 0) {
