@@ -20,7 +20,6 @@ public class CompasBlock extends Block {
 		j = (int)(Math.random() * 10);
 		k = (int)(Math.random() * 10);
 		world.setBlock(x + i, y + j, z + k, q);
-		player.addChatMessage("/tp " + (x+i) + " " + (y+j) + " " + (z+k));
 		return false;
 	}
 }
