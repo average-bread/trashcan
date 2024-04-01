@@ -4,7 +4,8 @@
     "package": "cursedbread.trashcan.mixins",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-      "BlockBreakMixin"
+      "BlockBreakMixin",
+      "BlockWalkMixin"
     ],
     "client": [
     ],
