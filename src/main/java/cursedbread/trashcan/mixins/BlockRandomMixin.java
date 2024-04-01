@@ -9,6 +9,8 @@ import java.util.Random;
 @Mixin(value= Block.class,remap=false)
 public abstract class BlockRandomMixin {
 
+	private float movementScale;
+
 	public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
 		int i = world.rand.nextInt(910);
 		i++;
@@ -20,5 +22,7 @@ public abstract class BlockRandomMixin {
 			}
 		}
 		world.setBlock(x, y, z, i);
+
+		this.movementScale = 0.98f;
 	}
 }

@@ -6,7 +6,6 @@
     "mixins": [
       "BlockBreakMixin",
       "BlockWalkMixin",
-      "BlockSlipMixin",
       "BlockRandomMixin"
     ],
     "client": [
