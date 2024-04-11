@@ -2,8 +2,10 @@ package cursedbread.trashcan.mixins;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.entity.TileEntity;
+import net.minecraft.core.entity.EntityItem;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
+import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -24,7 +26,17 @@ public abstract class BlockBreakMixin {
 	private void multiplyHarvest(World world, EntityPlayer entityplayer, int x, int y, int z, int meta, TileEntity tileEntity, CallbackInfo ci){
 		ItemStack heldItemStack = entityplayer.inventory.getCurrentItem();
 		for (int i = 0; i < world.rand.nextInt(1000); i++) {
-			this.dropBlockWithCause(world, EnumDropCause.PROPER_TOOL, x, y, z, meta, tileEntity);
+			int j = world.rand.nextInt(1700);
+			j--;
+			while (Item.itemsList[j] == null) {
+				j = j - 1;
+				if (j < 0) {
+					j = 0;
+					break;
+				}
+			}
+			ItemStack random = new ItemStack(Item.itemsList[j]);
+			EntityItem entityItem = world.dropItem(x, y, z, random);
 		}
 	}
 }
